@@ -46,7 +46,7 @@ namespace Componentes
                     value = 0;
                 xx = value;
                 lblTime.Text = String.Format("{0:D2}:{1:D2}", xx, yy);
-                this.Refresh();
+                //this.Refresh();  No porque al cambiar el texto ya se hace refresh
             }
         }
 
@@ -65,7 +65,7 @@ namespace Componentes
                 }
                 yy = value;
                 lblTime.Text = String.Format("{0:D2}:{1:D2}", xx, yy);
-                this.Refresh();
+                //this.Refresh();     No porque al cambiar el texto ya se hace refresh
             }
         }
 
