@@ -52,6 +52,12 @@
     <Compile Include="Ejer1.Designer.cs">
       <DependentUpon>Ejer1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ejer2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ejer2.Designer.cs">
+      <DependentUpon>Ejer2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Ejer1.resx">
       <DependentUpon>Ejer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejer2.resx">
+      <DependentUpon>Ejer2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -74,6 +83,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +97,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuPrincipal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

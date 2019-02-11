@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace Componentes
 {
+    //Validado
     public partial class Ejer1 : Control
     {
         [RefreshProperties(RefreshProperties.Repaint)]
@@ -25,25 +26,54 @@ namespace Componentes
         private bool gradienteOpc = false;
         [Category("Gradiente")]
         [Description("Indica si aparece un gradiente de fondo")]
-        public bool GradienteOpc { get => gradienteOpc; set { gradienteOpc = value; this.Refresh(); } }
+        public bool GradienteOpc
+        {
+            get => gradienteOpc;
+            set
+            {
+                gradienteOpc = value;
+                this.Refresh();
+            }
+        }
 
         private Color gradientecolor1 = Color.Blue;
         [Category("Gradiente")]
         [Description("Indica el primer color del gradiente")]
-        public Color GradienteColor1 { get => gradientecolor1; set { gradientecolor1 = value; this.Refresh(); } }
+        public Color GradienteColor1
+        {
+            get => gradientecolor1;
+            set
+            {
+                gradientecolor1 = value;
+                this.Refresh();
+            }
+        }
 
         private Color gradientecolor2 = Color.Red;
         [Category("Gradiente")]
         [Description("Indica el segundo color del gradiente")]
-        public Color GradienteColor2 { get => gradientecolor2; set { gradientecolor2 = value; this.Refresh(); } }
-
-        [Category("La propiedad cambió")]
-        [Description("Se lanza cuando se hace click sobre el")]
+        public Color GradienteColor2
+        {
+            get => gradientecolor2;
+            set
+            {
+                gradientecolor2 = value;
+                this.Refresh();
+            }
+        }
 
         private Image imagenMarca;
         [Category("Varios")]
         [Description("Indica la ruta de la imagen de marca")]
-        public Image ImagenMarca { get => imagenMarca; set { imagenMarca = value; this.Refresh(); } }
+        public Image ImagenMarca
+        {
+            get => imagenMarca;
+            set
+            {
+                imagenMarca = value;
+                this.Refresh();
+            }
+        }
 
         private eMarca marca = eMarca.Nada;
         public eMarca Marca
@@ -53,12 +83,15 @@ namespace Componentes
                 marca = value;
                 this.Refresh();
             }
-            get { return marca; }
+            get
+            {
+                return marca;
+            }
         }
 
 
-        int grosor = 0; //Grosor de las líneas de dibujo
-        int offsetX = 0; //Desplazamiento a la derecha del texto
+        int grosor; //Grosor de las líneas de dibujo
+        int offsetX; //Desplazamiento a la derecha del texto
 
         public Ejer1()
         {
@@ -70,8 +103,10 @@ namespace Componentes
             base.OnPaint(e);
             Graphics g = e.Graphics;
             int offsetY = 0; //Desplazamiento hacia abajo del texto
-                             //Esta propiedad provoca mejoras en la apariencia o en la eficiencia
-                             // a la hora de dibujar
+            offsetX = 0;
+            grosor = 0;
+            //Esta propiedad provoca mejoras en la apariencia o en la eficiencia
+            // a la hora de dibujar
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             //Dependiendo del valor de la propiedad marca dibujamos una
             //Cruz o un Círculo
@@ -79,7 +114,8 @@ namespace Componentes
 
             if (gradientecolor1 != null && gradientecolor2 != null && GradienteOpc)
             {
-                LinearGradientBrush gradiente = new LinearGradientBrush(new PointF(0, 0), new PointF(this.Width, this.Height), gradientecolor1, gradientecolor2);
+                LinearGradientBrush gradiente = new LinearGradientBrush(new PointF(0, 0),
+                    new PointF(this.Width, this.Height), gradientecolor1, gradientecolor2);
                 g.FillRectangle(gradiente, 0, 0, this.Width, this.Height);
             }
 
@@ -106,8 +142,9 @@ namespace Componentes
                 case eMarca.Imagen:
                     if (imagenMarca != null)
                     {
-                        g.DrawImage(imagenMarca, 0, 0, 50, 50);
-                        offsetX = 50;
+                        grosor = 5;
+                        g.DrawImage(imagenMarca, 0, 0, this.Height, this.Height);
+                        offsetX = this.Height;
                         offsetY = 18;
                     }
                     break;
@@ -128,7 +165,7 @@ namespace Componentes
 
         private void Ejer1_MouseClick(object sender, MouseEventArgs e)
         {
-            if (e.X < offsetX+grosor && Marca != eMarca.Nada)
+            if (e.X < offsetX + grosor && Marca != eMarca.Nada)
             {
                 ClickEnMarca?.Invoke(this, EventArgs.Empty);
             }
