@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
-            this.ejer31 = new Componentes.Ejer3();
+            this.ejer41 = new Componentes.Ejer4();
+            this.ahorcado = new Componentes.Ejer3();
             this.componente2 = new Componentes.Ejer2();
             this.ejer11 = new Componentes.Ejer1();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,14 +65,27 @@
             this.lblError.Size = new System.Drawing.Size(0, 17);
             this.lblError.TabIndex = 4;
             // 
-            // ejer31
+            // ejer41
             // 
-            this.ejer31.Errores = 6;
-            this.ejer31.Location = new System.Drawing.Point(902, 185);
-            this.ejer31.Name = "ejer31";
-            this.ejer31.Size = new System.Drawing.Size(217, 193);
-            this.ejer31.TabIndex = 6;
-            this.ejer31.Text = "ejer31";
+            this.ejer41.EjeX = "Eje X";
+            this.ejer41.EjeY = "Eje Y";
+            this.ejer41.Location = new System.Drawing.Point(821, 479);
+            this.ejer41.Name = "ejer41";
+            this.ejer41.Size = new System.Drawing.Size(450, 110);
+            this.ejer41.TabIndex = 7;
+            this.ejer41.Text = "ejer41";
+            this.ejer41.Valores = ((System.Collections.Generic.List<int>)(resources.GetObject("ejer41.Valores")));
+            // 
+            // ahorcado
+            // 
+            this.ahorcado.Errores = 4;
+            this.ahorcado.Location = new System.Drawing.Point(902, 185);
+            this.ahorcado.Name = "ahorcado";
+            this.ahorcado.Size = new System.Drawing.Size(217, 193);
+            this.ahorcado.TabIndex = 6;
+            this.ahorcado.CambiaError += new System.EventHandler(this.ahorcado_CambiaError);
+            this.ahorcado.Ahorcado += new System.EventHandler(this.ahorcado_Ahorcado);
+            this.ahorcado.Click += new System.EventHandler(this.ejer31_Click);
             // 
             // componente2
             // 
@@ -104,7 +119,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1279, 707);
-            this.Controls.Add(this.ejer31);
+            this.Controls.Add(this.ejer41);
+            this.Controls.Add(this.ahorcado);
             this.Controls.Add(this.componente2);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.button1);
@@ -126,7 +142,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblError;
         private Ejer2 componente2;
-        private Ejer3 ejer31;
+        private Ejer3 ahorcado;
+        private Ejer4 ejer41;
     }
 }
 

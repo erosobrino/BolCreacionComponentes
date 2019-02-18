@@ -113,5 +113,20 @@ namespace Componentes
         {
             componente2.XX++;
         }
+
+        private void ejer31_Click(object sender, EventArgs e)
+        {
+            ahorcado.Errores++;
+        }
+
+        private void ahorcado_CambiaError(object sender, EventArgs e)
+        {
+            Console.WriteLine("error++");
+        }
+
+        private void ahorcado_Ahorcado(object sender, EventArgs e)
+        {
+            Console.WriteLine("ahorcado");
+        }
     }
 }

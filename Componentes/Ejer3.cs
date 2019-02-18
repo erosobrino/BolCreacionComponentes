@@ -35,11 +35,11 @@ namespace Componentes
             }
         }
 
-        [Category("Accion")]
+        [Category("Acción")]
         [Description("Se lanza cuando se modifica la camtidad de errores")]
         public event System.EventHandler CambiaError;
 
-        [Category("Accion")]
+        [Category("Acción")]
         [Description("Se lanza cuando se alzanza el numero maximo de errores")]
         public event System.EventHandler Ahorcado;
 

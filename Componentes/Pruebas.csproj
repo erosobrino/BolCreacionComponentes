@@ -64,6 +64,12 @@
     <Compile Include="Ejer3.Designer.cs">
       <DependentUpon>Ejer3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ejer4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ejer4.Designer.cs">
+      <DependentUpon>Ejer4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
