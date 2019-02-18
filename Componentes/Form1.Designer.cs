@@ -31,6 +31,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
+            this.ejer31 = new Componentes.Ejer3();
             this.componente2 = new Componentes.Ejer2();
             this.ejer11 = new Componentes.Ejer1();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,6 +62,15 @@
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 17);
             this.lblError.TabIndex = 4;
+            // 
+            // ejer31
+            // 
+            this.ejer31.Errores = 6;
+            this.ejer31.Location = new System.Drawing.Point(902, 185);
+            this.ejer31.Name = "ejer31";
+            this.ejer31.Size = new System.Drawing.Size(217, 193);
+            this.ejer31.TabIndex = 6;
+            this.ejer31.Text = "ejer31";
             // 
             // componente2
             // 
@@ -94,6 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1279, 707);
+            this.Controls.Add(this.ejer31);
             this.Controls.Add(this.componente2);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.button1);
@@ -115,6 +126,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblError;
         private Ejer2 componente2;
+        private Ejer3 ejer31;
     }
 }
 
