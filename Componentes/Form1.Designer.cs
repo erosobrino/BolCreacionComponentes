@@ -67,19 +67,21 @@
             // 
             // ejer41
             // 
+            this.ejer41.Ajuste = true;
             this.ejer41.EjeX = "Eje X";
             this.ejer41.EjeY = "Eje Y";
-            this.ejer41.Location = new System.Drawing.Point(821, 479);
+            this.ejer41.Location = new System.Drawing.Point(856, 363);
             this.ejer41.Name = "ejer41";
-            this.ejer41.Size = new System.Drawing.Size(450, 110);
+            this.ejer41.Size = new System.Drawing.Size(360, 320);
             this.ejer41.TabIndex = 7;
+            this.ejer41.Tamaño = 80;
             this.ejer41.Text = "ejer41";
             this.ejer41.Valores = ((System.Collections.Generic.List<int>)(resources.GetObject("ejer41.Valores")));
             // 
             // ahorcado
             // 
             this.ahorcado.Errores = 4;
-            this.ahorcado.Location = new System.Drawing.Point(902, 185);
+            this.ahorcado.Location = new System.Drawing.Point(905, 148);
             this.ahorcado.Name = "ahorcado";
             this.ahorcado.Size = new System.Drawing.Size(217, 193);
             this.ahorcado.TabIndex = 6;
