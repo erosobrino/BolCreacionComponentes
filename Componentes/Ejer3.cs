@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Componentes
 {
+    //Validado
     public partial class Ejer3 : Control
     {
         int cantMax = 6;
@@ -49,6 +50,7 @@ namespace Componentes
 
         }
 
+        Pen p = new Pen(Color.Black);
 
         protected override void OnPaint(PaintEventArgs pe)
         {
@@ -60,7 +62,6 @@ namespace Componentes
             lineas[3] = new Linea(new Point(this.Width / 3 * 2, this.Height / 6 * 4), new Point(this.Width / 3 * 2 - this.Width / 10, this.Height - this.Height / 8));
             lineas[4] = new Linea(new Point(this.Width / 3 * 2, this.Height / 6 * 4), new Point(this.Width / 3 * 2 + this.Width / 10, this.Height - this.Height / 8));
 
-            Pen p = new Pen(Color.Black);
             pe.Graphics.DrawLine(p, new Point(0, this.Height - 5), new Point(this.Width, this.Height - 5));
             pe.Graphics.DrawLine(p, new Point(this.Width / 3, this.Height - 5), new Point(this.Width / 3, 0));
             pe.Graphics.DrawLine(p, new Point(this.Width / 3, 0), new Point(this.Width / 3 * 2, 0));

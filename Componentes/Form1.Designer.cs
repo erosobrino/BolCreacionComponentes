@@ -43,13 +43,13 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(787, 464);
+            this.pictureBox1.Size = new System.Drawing.Size(486, 280);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(805, 12);
+            this.button1.Location = new System.Drawing.Point(12, 298);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 81);
             this.button1.TabIndex = 3;
@@ -70,7 +70,7 @@
             this.ejer41.Ajuste = true;
             this.ejer41.EjeX = "Eje X";
             this.ejer41.EjeY = "Eje Y";
-            this.ejer41.Location = new System.Drawing.Point(856, 363);
+            this.ejer41.Location = new System.Drawing.Point(882, 12);
             this.ejer41.Name = "ejer41";
             this.ejer41.Size = new System.Drawing.Size(360, 320);
             this.ejer41.TabIndex = 7;
@@ -80,10 +80,10 @@
             // 
             // ahorcado
             // 
-            this.ahorcado.Errores = 4;
-            this.ahorcado.Location = new System.Drawing.Point(905, 148);
+            this.ahorcado.Errores = 0;
+            this.ahorcado.Location = new System.Drawing.Point(504, 12);
             this.ahorcado.Name = "ahorcado";
-            this.ahorcado.Size = new System.Drawing.Size(217, 193);
+            this.ahorcado.Size = new System.Drawing.Size(339, 367);
             this.ahorcado.TabIndex = 6;
             this.ahorcado.CambiaError += new System.EventHandler(this.ahorcado_CambiaError);
             this.ahorcado.Ahorcado += new System.EventHandler(this.ahorcado_Ahorcado);
@@ -92,9 +92,9 @@
             // componente2
             // 
             this.componente2.Funcionando = true;
-            this.componente2.Location = new System.Drawing.Point(969, 12);
+            this.componente2.Location = new System.Drawing.Point(176, 298);
             this.componente2.Name = "componente2";
-            this.componente2.Size = new System.Drawing.Size(201, 89);
+            this.componente2.Size = new System.Drawing.Size(194, 81);
             this.componente2.TabIndex = 5;
             this.componente2.XX = 3;
             this.componente2.YY = 57;
@@ -108,7 +108,7 @@
             this.ejer11.GradienteColor2 = System.Drawing.Color.Peru;
             this.ejer11.GradienteOpc = true;
             this.ejer11.ImagenMarca = global::Componentes.Properties.Resources.MenuPrincipal;
-            this.ejer11.Location = new System.Drawing.Point(12, 613);
+            this.ejer11.Location = new System.Drawing.Point(12, 385);
             this.ejer11.Marca = Componentes.Ejer1.eMarca.Imagen;
             this.ejer11.Name = "ejer11";
             this.ejer11.Size = new System.Drawing.Size(459, 82);
@@ -120,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1279, 707);
+            this.ClientSize = new System.Drawing.Size(1373, 546);
             this.Controls.Add(this.ejer41);
             this.Controls.Add(this.ahorcado);
             this.Controls.Add(this.componente2);
