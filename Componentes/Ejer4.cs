@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Componentes
 {
+    //Validado Cuidado tamaño fuente
     public partial class Ejer4 : Control
     {
         private List<int> valores = new List<int>();
@@ -17,7 +18,11 @@ namespace Componentes
         [Description("Valores de las barras del grafico")]
         public List<int> Valores
         {
-            get => valores;
+            get
+            {
+                this.Refresh();
+                return valores;
+            }
             set
             {
                 valores = value;
@@ -100,7 +105,7 @@ namespace Componentes
                 if (!ajuste && tamaño > 20)
                     this.Height = tamaño;
                 else
-                    this.Height = valores.Max()+20;
+                    this.Height = valores.Max() + 20;
                 this.Width = 80 * valores.Count + 40;
             }
             catch (InvalidOperationException)
@@ -110,6 +115,7 @@ namespace Componentes
             }
             for (int i = 0; i < valores.Count; i++)
             {
+                //con un array de colores
                 switch (p.Color.Name)
                 {
                     case "Green":

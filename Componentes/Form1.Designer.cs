@@ -68,13 +68,14 @@
             // ejer41
             // 
             this.ejer41.Ajuste = true;
-            this.ejer41.EjeX = "Eje X";
+            this.ejer41.EjeX = "Cantidad";
             this.ejer41.EjeY = "Eje Y";
-            this.ejer41.Location = new System.Drawing.Point(882, 12);
+            this.ejer41.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ejer41.Location = new System.Drawing.Point(766, 25);
             this.ejer41.Name = "ejer41";
-            this.ejer41.Size = new System.Drawing.Size(360, 320);
+            this.ejer41.Size = new System.Drawing.Size(520, 320);
             this.ejer41.TabIndex = 7;
-            this.ejer41.Tamaño = 80;
+            this.ejer41.Tamaño = 100;
             this.ejer41.Text = "ejer41";
             this.ejer41.Valores = ((System.Collections.Generic.List<int>)(resources.GetObject("ejer41.Valores")));
             // 
